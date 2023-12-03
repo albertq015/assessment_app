@@ -6,4 +6,5 @@ import 'package:survey_app/ui/screens/welcome_screen/welcome_screen.dart';
 Map<String, WidgetBuilder> screenRoutes = {
   '/' : (context) => const WelcomeScreen(),
   '/dashboard_screen' : (context) => DashboardScreen(),
+  '/exam_page' : (context) => ExamPage(),
 };

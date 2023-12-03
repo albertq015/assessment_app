@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+
+import '../../../../core/providers/screen_config.dart';
+import '../../../widgets/dashboard_widget.dart';
 class ExamPage extends StatefulWidget {
-  PageController pageController;
-  ExamPage({super.key,required this.pageController});
+  ExamPage({super.key,});
 
   @override
   State<ExamPage> createState() => _ExamPageState();
@@ -10,7 +12,25 @@ class ExamPage extends StatefulWidget {
 class _ExamPageState extends State<ExamPage> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder(
+    SizeConfig().init(context);
+    return DashboardWidget(
+      title: 'Dashboard Widget',
+      child: Container(),
+      onTap: [
+            (){
+          Navigator.pushReplacementNamed(context, '/dashboard_screen');
+        },
+            (){
+          Navigator.pushReplacementNamed(context, '/exam_page');
+        },
+            (){},
+            (){},
+            (){},
+            (){},
+            (){},
+            (){},
+            (){},
+      ],
     );
   }
 }
