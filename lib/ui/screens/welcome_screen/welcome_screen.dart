@@ -17,13 +17,13 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
     return Scaffold(
       body: Container(
         decoration: const BoxDecoration(
-            image: DecorationImage(image: AssetImage("assets/background1.jpg"), fit: BoxFit.fill)
+            image: DecorationImage(image: AssetImage("assets/background1.jpg"), fit: BoxFit.fill, scale: 1)
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
-              padding: EdgeInsets.symmetric(horizontal: getScreenPixel(60),),
+              padding: EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(80),),
               child: Card(
                 child: Container(
                   margin: EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(40), vertical: getProportionateScreenHeight(100)),
@@ -40,9 +40,17 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                         ),
                       ),
                       SizedBox(height: getProportionateScreenHeight(30),),
-                      ElevatedButton(onPressed: (){
-                        Navigator.pushNamed(context, '/dashboard_screen');
-                      },style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF224b6b)), child: const Text('Login'),)
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Expanded(
+                            flex: 3,
+                            child: ElevatedButton(onPressed: (){
+                              Navigator.pushNamed(context, '/dashboard_screen');
+                            },style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF224b6b)), child: const Text('Login'),),
+                          ),
+                        ],
+                      ),
                     ],
                   ),
                 ),

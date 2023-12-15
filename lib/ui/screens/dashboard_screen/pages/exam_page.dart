@@ -14,7 +14,7 @@ class _ExamPageState extends State<ExamPage> {
   Widget build(BuildContext context) {
     SizeConfig().init(context);
     return DashboardWidget(
-      title: 'Dashboard Widget',
+      title: 'Exam Page',
       child: Container(),
       onTap: [
             (){

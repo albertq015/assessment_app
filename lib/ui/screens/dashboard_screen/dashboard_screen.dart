@@ -19,7 +19,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
   Widget build(BuildContext context) {
     SizeConfig().init(context);
     return DashboardWidget(
-      title: 'Dashboard Widget',
+      title: 'Dashboard Screen',
       child: Container(),
       onTap: [
         (){
@@ -28,9 +28,15 @@ class _DashboardScreenState extends State<DashboardScreen> {
         (){
         Navigator.pushReplacementNamed(context, '/exam_page');
         },
-        (){},
-        (){},
-        (){},
+        (){
+          Navigator.pushReplacementNamed(context, '/exam_page');
+        },
+        (){
+          Navigator.pushReplacementNamed(context, '/exam_page');
+        },
+        (){
+          Navigator.pushReplacementNamed(context, '/exam_page');
+        },
         (){},
         (){},
         (){},
